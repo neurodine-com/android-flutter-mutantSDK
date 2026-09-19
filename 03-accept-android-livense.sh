@@ -1,0 +1,1 @@
+yes y | sdkmanager --licenses 
