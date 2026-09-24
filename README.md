@@ -112,9 +112,11 @@ yes y | sdkmanager --licenses
 
    Instructions to complete androidSDK update && upgrade (no root required for androidSDK):
 
-      +`sdkmanager "build-tools;28.0.3" "platforms;android-36"`
-      
-      >when done, again accept license like before  
+```
+sdkmanager "build-tools;28.0.3" "platforms;android-36"
+```
+
+   when done, again accept license like before  
 
    In case `flutter doctor` present issues, do a broad upgrade, like so:
       +sdkmanager upgrade
@@ -123,7 +125,8 @@ yes y | sdkmanager --licenses
    You/Me will not use it at all as I have no KVM/VT support in miniPC.
 
 
-
+===
+Footnotes   
 
 [^androidsdkdockerurl]:
    <https://hub.docker.com/r/androidsdk/android-31>
