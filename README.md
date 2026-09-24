@@ -56,7 +56,7 @@ Summary is harsh for miniPC. AndroidSDK avaiability:
    + TAR do the same as EXE in genneral or fail to update providing missing sub-components
    + docker container has no use -> NO /dev/kvm  
 
-   [image from Docker Hub of androidSDK/android-31](https://hub.docker.com/r/androidsdk/android-31 '"\")
+   [image from Docker Hub of androidSDK/android-31](https://hub.docker.com/r/androidsdk/android-31 \"androidSDK\")
 
 
 
@@ -91,7 +91,7 @@ THISISNICE_DOCKER_TO_DOCKER_COPY_HEREDOC
    >Most increadible thing is that the source image from dockerhub is fiew Gigs and the build command makes the proxyfs image in fiew secs!. On my miniPC it took less then 4 secs to complete!  
 
    4.Use the andoidsdk-proxyfs image.  
-   Run script from repository in shell: [02-runproxiedfs-andenv_setup.sh](https://raw.githubusercontent.com/neurodine-com/android-flutter-mutantSDK/refs/heads/main/02-runproxiedfs-andenv_setup.sh \"script to mount proxyfs\").
+   Run script from repository in shell: [02-runproxiedfs-andenv_setup.sh](../blob/main/02-runproxiedfs-andenv_setup.sh).
 
    >To not BRAKE any dir or file structure from mounted docker image columes, use the **setfacl** commands below.
 ```bash
