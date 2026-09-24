@@ -91,7 +91,7 @@ THISISNICE_DOCKER_TO_DOCKER_COPY_HEREDOC
    >Most increadible thing is that the source image from dockerhub is fiew Gigs and the build command makes the proxyfs image in fiew secs!. On my miniPC it took less then 4 secs to complete!  
 
    4.Use the andoidsdk-proxyfs image.  
-   Run script from repository in shell: 02-runproxiedfs-andenv_setup.sh.
+   Run script from repository in shell: [02-runproxiedfs-andenv_setup.sh](https://raw.githubusercontent.com/neurodine-com/android-flutter-mutantSDK/refs/heads/main/02-runproxiedfs-andenv_setup.sh \"script to mount proxyfs\").
 
    >To not BRAKE any dir or file structure from mounted docker image columes, use the **setfacl** commands below.
 ```bash
