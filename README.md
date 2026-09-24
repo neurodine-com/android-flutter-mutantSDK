@@ -95,12 +95,12 @@ THISISNICE_DOCKER_TO_DOCKER_COPY_HEREDOC
    Run script from repository in shell: 02-runproxiedfs-andenv_setup.sh.
 
    >To not BRAKE any dir or file structure from mounted docker image columes, use the **setfacl** commands below.
-   ```bash
+```bash
 typeset MEBENOTUSER="${MEBENOTUSER:=$(whoami)}" && ( \
   sudo setfacl -R -m u:${MEBENOTUSER}:rwx ./androidsdk-proxyfs
   sudo setfacl -R -d -m u:${MEBENOTUSER}:rwx ./androidsdk-proxyfs 
 )
-    ```
+```
 
    Afterwards, step into _${ANDROID_HOME}/cmdline-tools/latest/bin_ and accept the license agreenment (read it ...:-)  
    To get with it much faster then typing or waiting for text, do:
@@ -111,7 +111,9 @@ yes y | sdkmanager --licenses
    The `flutter doctor` when run, should now present LESS problems and if ANY, the solution's are staight-forward.  
 
    Instructions to complete androidSDK update && upgrade (no root required for androidSDK):
-      +sdkmanager "build-tools;28.0.3" "platforms;android-36"
+
+      +`sdkmanager "build-tools;28.0.3" "platforms;android-36"`
+      
       >when done, again accept license like before  
 
    In case `flutter doctor` present issues, do a broad upgrade, like so:
