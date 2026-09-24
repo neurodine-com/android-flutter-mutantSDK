@@ -124,8 +124,9 @@ sdkmanager "build-tools;28.0.3" "platforms;android-36"
    You/Me will not use it at all as I have no KVM/VT support in miniPC.
 
 
-#### Footnotes   
-===
+---
+### Footnotes
+
 
 [^androidsdkdockerurl]:
   [androidSDK @ DockerHub](https://hub.docker.com/r/androidsdk/android-31)
@@ -139,7 +140,7 @@ sdkmanager "build-tools;28.0.3" "platforms;android-36"
 [^osversion]:
   ```Bash
   uname -vro
-  ```
+```
   >6.8.0-106-generic #106-**Ubuntu** SMP PREEMPT_DYNAMIC Fri Mar  6 07:58:08 UTC 2026 GNU/Linux
 ---
 
