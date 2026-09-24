@@ -125,24 +125,34 @@ sdkmanager "build-tools;28.0.3" "platforms;android-36"
 
 
 ---
-### Footnotes
+### Footnotes  
 
 
 [^androidsdkdockerurl]:
-  [androidSDK @ DockerHub](https://hub.docker.com/r/androidsdk/android-31)
+  https://hub.docker.com/r/androidsdk/android-31
+  
+
 ---
+
 
 [^theflutterframework]:
   Flutter framework and develope in Dart language  
-  Both Flutter and Dart are installed as VSCode extensions
+  Both Flutter and Dart are installed as VSCode extensions  
+  
+
 ---
+
 
 [^osversion]:
   ```Bash
   uname -vro
 ```
-  >6.8.0-106-generic #106-**Ubuntu** SMP PREEMPT_DYNAMIC Fri Mar  6 07:58:08 UTC 2026 GNU/Linux
+   >6.8.0-106-generic #106-**Ubuntu** SMP PREEMPT_DYNAMIC Fri Mar  6 07:58:08 UTC 2026 GNU/Linux
+  
+
+
 ---
+
 
 [^devhostinfo]:
   os: Linux Mint, SSD: 256GB, RAM: 12GB DDR, CPU: 2xCore Celeron  
