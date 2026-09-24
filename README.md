@@ -9,25 +9,31 @@ Idea is to code/create a App (kind of a ~Game) using a Flutter[^theflutterframew
    +MacOS
    +iOS
 
-What turned out to be the main problem maker was the AndroidSDK installation (hefty and strange restrictions)
+What turned out to be the main problem maker was the AndroidSDK installation (hefty and strange restrictions).
+
 I have a Very Old miniPC and no VT/KVM avaiability. Nothing that can run Android device emulation.
 
-## Initial problems to fight with:
 ---
-1. Develompment device is a 12 years old miniPC (SSD:256GB, RAM:12GB DDR, CPU:Intel celeron)[^saveresourcespc]
-   1.miniPC's BIOS with no virtualisation 
-      +`flutter doctor` - reports missing /dev/kvm
-      >No emulation device is the CORE issue.  
-      >No target to deploy/debug/test App in a Android device.  
+## Workplace introduction:  
+1.Develompment host:
+   **_12 years old miniPC_** (HDD:256GB SSD, RAM:12GB DDR, CPU:Intel Celeron)[^devhostinfo]  
+   It is a **Remote** host on LAN, _Linux Mint_[^osversion] with No Graphical Target 
+   > (graphics makes to much cpu lags)  
 
-   Solution is: A Phisical Android device _(Developer On)_ on USB cable wired with miniPC
+   +miniPC's BIOS has no virtualisation:  
+   >No emulation device is the CORE issue.  
+   >No target to deploy/debug/test App in a Android device.  
    
-   2.Dev Device is a **Remote** Linux Mint (Ubuntu's) - no graphical Target[^saveresourcespc]
-   3.need to use VSCode remote session and workspace _(no Android Studio env)_
-   4.Failing installation of **AndroidSDK** native installer _(PC resources starvation problem)_
+   `flutter doctor` - reports missing /dev/kvm
 
+    Solution is: A Phisical Android device _(Developer On)_ on USB cable wired with miniPC
+   
+2.Development workspace:
+   A VSCode's remote ssh session bound to Flutter's project dir 
+   >_Android Studio makes my miniPC weep_  
 
-Lack of hardware support for virtualization (KVM) on older hardware prevents starting the Android emulator and SDK containers on the fly.
+   Native **AndroidSDK** installer fails to start/complete due to resource, no-virtualisation
+
 
 
 ### Step 1: Extract a clean SDK from Docker
@@ -53,13 +59,13 @@ Install the android-sdk-platform-tools-common package, add the user to the **_pl
 [^theflutterframework]:
   Flutter framework and develope in Dart language  
 
-[^osresource]:
+[^osversion]:
   ```Bash
   uname -vro
   ```
   >6.8.0-106-generic #106-**Ubuntu** SMP PREEMPT_DYNAMIC Fri Mar  6 07:58:08 UTC 2026 GNU/Linux
 
-[^minipccpuinfo]:
+[^devhostinfo]:
   os: Linux Mint, SSD: 256GB, RAM: 12GB DDR, CPU: 2xCore Celeron  
   ```BASH
   grep -iE '^((model name)|(vendor_id))[[:blank:]]+:.*$' < <(</proc/cpuinfo)
