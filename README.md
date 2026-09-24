@@ -34,9 +34,8 @@ I have a Very Old miniPC and no VT/KVM avaiability. Nothing that can run Android
    -VSCode Server on Remote host (miniPC), ssh boundry set on miniPC's wrokspace local directory 
    >No _Android Studio_ | It makes my miniPC weep  
    
-   -Flutter, Dart - VSCode extension
-      +3.47.4 Flutter SDK
-      +3.13.3 (Flutter) - Dart SDK
+   -3.47.4 Flutter SDK - VSCode extension
+   -3.13.3 (Flutter) - Dart SDK - VSCode extension
    -Java openJDK 25 LTS for Gradle 
    
 
@@ -46,7 +45,7 @@ I have a Very Old miniPC and no VT/KVM avaiability. Nothing that can run Android
       -Native **AndroidSDK** installer fails to start/complete due to resource, no-virtualisation.  
       -androidSDK from tar.gz relative files usually fail on dir/files structure, requirements+updates
 
-   +`flutter doctor` reports no GTK dev libs from i386 architecture (??)
+   +**flutter doctor** reports no GTK dev libs from i386 architecture (??)
    +docker androidSDK/**android-31**[^androidsdkdockerurl] is the max version I found, where **android-36** is the goal
    >Instructions to run docker'ed androidSDK image FAIL -> **no /dev/kvm**. Different way's of running dockered androidSDK image, runs a container that fails to create emulated device :-(
    
@@ -54,10 +53,11 @@ I have a Very Old miniPC and no VT/KVM avaiability. Nothing that can run Android
 
       ..harsh for miniPC. AndroidSDK avaiability:
 
-      +~EXE installers fail on start or fail in update-maintanance.  
-      +TAR do the same as EXE in genneral or fail to update providing missing sub-components
-      +docker container has no use -> NO /dev/kvm  
-      > <https://hub.docker.com/r/androidsdk/android-31>
+   +EXE installers fail on start or fail in update-maintanance.  
+   +TAR do the same as EXE in genneral or fail to update providing missing sub-components
+   +docker container has no use -> NO /dev/kvm  
+
+   [image from Docker Hub of androidSDK/android-31](https://hub.docker.com/r/androidsdk/android-31 '"\")
 
 
 
@@ -125,8 +125,8 @@ sdkmanager "build-tools;28.0.3" "platforms;android-36"
    You/Me will not use it at all as I have no KVM/VT support in miniPC.
 
 
-===
 Footnotes   
+===
 
 [^androidsdkdockerurl]:
    <https://hub.docker.com/r/androidsdk/android-31>
