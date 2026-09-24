@@ -41,12 +41,12 @@ I have a Very Old miniPC and no VT/KVM avaiability. Nothing that can run Android
 
 3.Problems:  
 
-   +AndroidSDK missing
-      -Native **AndroidSDK** installer fails to start/complete due to resource, no-virtualisation.  
-      -androidSDK from tar.gz relative files usually fail on dir/files structure, requirements+updates
-
-   +**flutter doctor** reports no GTK dev libs from i386 architecture (??)
-   +docker androidSDK/**android-31**[^androidsdkdockerurl] is the max version I found, where **android-36** is the goal
+   AndroidSDK missing:
+   - Native **AndroidSDK** installer fails to start/complete due to resource, no-virtualisation.  
+   - androidSDK from tar.gz relative files usually fail on dir/files structure, requirements+updates
+   - **flutter doctor** reports no GTK dev libs from i386 architecture (??)
+   - docker androidSDK/**android-31**[^androidsdkdockerurl] is the max version I found, where **android-36** is the goal  
+   
    >Instructions to run docker'ed androidSDK image FAIL -> **no /dev/kvm**. Different way's of running dockered androidSDK image, runs a container that fails to create emulated device :-(
    
    Summary:
