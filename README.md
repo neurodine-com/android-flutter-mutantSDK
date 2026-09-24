@@ -1,13 +1,13 @@
 # android-flutter-mutantSDK
 
 This is a successfull attempt to develope and build in VSCode a Flutter[^theflutterframework] project.
-Idea is to code/create a App (kind of a ~Game) using a Flutter[^theflutterframework] that runs smoothly on:
-   +Android
-   +Windows
-   +Linux
-   +WebBrowser
-   +MacOS
-   +iOS
+Idea is to code/create a App (kind of a ~Game) using a Flutter[^theflutterframework] that runs smoothly on:  
+   + Android
+   + Windows (I hate windows)
+   + Linux
+   + WebBrowser
+   + MacOS
+   + iOS
 
 What turned out to be the main problem maker was the AndroidSDK installation (hefty and strange restrictions).
 
