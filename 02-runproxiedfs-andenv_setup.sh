@@ -69,18 +69,22 @@ if [[ -n "${FOUND_CRITIDIR:=$( typeset CRITIDIR="${CRITIDIR:-.}" && env find "${
 				&& sudo setfacl -R -d -m u:${FOUND_WISEGUY}:rwx "${FOUND_CRITIDIR}"
 			) && ( \
 				cat >&2 <<-'INFORMATION_TOSET_PATH_ACCORDINGLY_HEREDOC_PARTA'
+				
 # :# To store andoidSDK proxiedfs structure as Android SDK's ANDROID_HOME variable run
-mkdir -p ~/.bashrc.d/ || :; ( cat > ~/.bashrc.d/"$(( 10#$(date +'%s') % 10#100 ))-load-ANDROIDHOME_SDK.sh" <<-'SAVE_ANDROIDSDK_CRITIPATH_HEREDOC'
+
+mkdir -p ~/.bashrc.d/ || :; 
+( \
+cat > ~/.bashrc.d/"$(( 10#$(date +'%s') % 10#100 ))-load-ANDROIDHOME_SDK.sh" <<-'SAVE_ANDROIDSDK_CRITIPATH_HEREDOC'
 INFORMATION_TOSET_PATH_ACCORDINGLY_HEREDOC_PARTA
                 		( sed -r "$( printf 's|@FOUND_CRITIDIR@|%s|' "${FOUND_CRITIDIR}" )" ) >&2 <<-'INFORMATION_TOSET_PATH_ACCORDINGLY_HEREDOC_PARTB'
 export ANDROID_HOME=@FOUND_CRITIDIR@
 INFORMATION_TOSET_PATH_ACCORDINGLY_HEREDOC_PARTB
                 		cat >&2 <<-'INFORMATION_TOSET_PATH_ACCORDINGLY_HEREDOC_PARTC'
-# :# Android Platform tools critical PATH entries
-# :# (with the important "latest" directory)
 export PATH=${PATH:+${PATH}"$( printf '%s%s' ${ANDROID_HOME:+:${ANDROID_HOME}}{/cmdline-tools/latest/bin,/platform-tools} )"}
 SAVE_ANDROIDSDK_CRITIPATH_HEREDOC
 )
+
+
 INFORMATION_TOSET_PATH_ACCORDINGLY_HEREDOC_PARTC
 			     ) \
 			  || ( ( echo "Failed to execute 'setfacl' for setting RWX permissions for dir:${FOUND_CRITIDIR}" | 2>&1 tee -a >&2 | systemd-cat ) || false )
@@ -88,7 +92,7 @@ INFORMATION_TOSET_PATH_ACCORDINGLY_HEREDOC_PARTC
 		fi
 		false
 	}; 
-	if docker run -d --restart unless-stopped --rm -v "${FOUND_CRITIDIR}":/sdk_export myown-androidsdk-proxyfs; then
+	if docker run -d -v "${FOUND_CRITIDIR}":/sdk_export myown-androidsdk-proxyfs:latest; then
 		if maketheaclfix ; then
 			return	
 		fi
