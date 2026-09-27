@@ -1,0 +1,73 @@
+# FLUTTER package downloaded from @ https://docs.flutter.dev/install/manual from
+# url: https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.47.5-stable.tar.xz
+#
+# :# command: flutter config --android-sdk "${ANDROID_HOME}"
+Setting "android-sdk" value to "${HOME}/develop/androidsdk-proxyfs".
+
+You may need to restart any open editors for them to read new settings.
+The Flutter CLI developer tool uses Google Analytics to report usage and diagnostic
+data along with package dependencies, and crash reporting to send basic crash
+reports. This data is used to help improve the Dart platform, Flutter framework,
+and related tools.
+
+Telemetry is not sent on the very first run. To disable reporting of telemetry,
+run this terminal command:
+
+    flutter --disable-analytics
+
+If you opt out of telemetry, an opt-out event will be sent, and then no further
+information will be sent. This data is collected in accordance with the Google
+Privacy Policy (https://policies.google.com/privacy).
+
+
+#
+#
+# :# command: flutter doctor
+Doctor summary (to see all details, run flutter doctor -v):
+[✓] Flutter (Channel stable, 3.47.5, on Linux Mint 22.3 7.0.0-34-generic, locale pl_PL.UTF-8)
+[✓] Android toolchain - develop for Android devices (Android SDK version 32.0.0)
+[✓] Chrome - develop for the web
+[✗] Linux toolchain - develop for Linux desktop
+    ✗ clang++ is required for Linux development.
+      It is likely available from your distribution (e.g.: apt install clang), or can be downloaded from https://releases.llvm.org/
+    ✗ CMake is required for Linux development.
+      It is likely available from your distribution (e.g.: apt install cmake), or can be downloaded from https://cmake.org/download/
+[✓] Connected device (2 available)
+[✓] Network resources
+
+! Doctor found issues in 1 category.
+
+
+# :# command: sudo apt install -y clang cmake
+
+
+# :# command: flutter doctor
+
+Doctor summary (to see all details, run flutter doctor -v):
+[✓] Flutter (Channel stable, 3.47.5, on Linux Mint 22.3 7.0.0-34-generic, locale pl_PL.UTF-8)
+[✓] Android toolchain - develop for Android devices (Android SDK version 32.0.0)
+[✓] Chrome - develop for the web
+[✓] Linux toolchain - develop for Linux desktop
+[✓] Connected device (2 available)
+[✓] Network resources
+
+• No issues found!
+
+
+# :# command: sdkmanager --update
+[===                                    ] 10% Computing updates...              
+Updating:
+platform-tools
+emulator
+cmdline-tools;latest
+system-images;android-31;google_apis;x86_64
+[=======================================] 100% Unzipping... platform-tools/sqlit
+
+# :# command: sdkmanager --licenses
+WARNING: The SDK Manager CLI tool (sdkmanager) is deprecated. Android CLI will be used instead.
+The 'android' binary can also be found in the cmdline-tools directory, and 'android sdk' is the replacement for 'sdkmanager'.
+To learn more about the Android CLI and how to use it, see the documentation (https://d.android.com/tools/agents/android-cli)
+
+Warning: The --licenses option is no longer needed.
+
+
