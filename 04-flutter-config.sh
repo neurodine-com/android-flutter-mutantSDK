@@ -1,1 +1,1 @@
-flutter config --android-sdk "${ANDOID_HOME:?}"
+flutter config --android-sdk "${ANDROID_HOME:?}"
